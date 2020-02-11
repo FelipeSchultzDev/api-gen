@@ -1,0 +1,11 @@
+import { Router } from 'express';
+
+import IndexController from '../controller/index.controller';
+import IndexValidation from '../validation/index.validation';
+
+
+const router = Router();
+
+router.get('/', IndexValidation.index, IndexController.index);
+
+export default router;
